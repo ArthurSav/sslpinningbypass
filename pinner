@@ -4,6 +4,14 @@ shopt -s extglob
 shopt -s dotglob
 shopt -s nullglob
 
+red=$'\e[1;31m'
+grn=$'\e[1;32m'
+yel=$'\e[1;33m'
+blu=$'\e[1;34m'
+mag=$'\e[1;35m'
+cyn=$'\e[1;36m'
+end=$'\e[0m'
+
 DEFAULT_ARRAY_START="@("
 
 apks=$DEFAULT_ARRAY_START
@@ -75,9 +83,9 @@ function showLicenseMenu(){
 
   listLicenses
 
-  echo "*************************************************************"
-  echo "  Choose license to sign with:"
-  echo "*************************************************************"
+  printf "\n*************************************************************"
+  printf "\n${yel}  Choose license to sign with:${end}"
+  printf "\n*************************************************************\n\n"
 
   ## Show a menu, listing all available apk files in the current dir. Also, there's a "quit" option
   select keystore in *.keystore $option_generate_license $option_quit;
@@ -115,9 +123,9 @@ function showSignMenu(){
 
   listApks
 
-  echo "*************************************************************"
-  echo "  Which apk would you like to sign? "
-  echo "*************************************************************"
+  printf "\n*************************************************************"
+  printf "\n${yel}  Which apk would you like to sign?${end}"
+  printf "\n*************************************************************\n\n"
 
   ## Show a menu, listing all available apk files in the current dir. Also, there's a "quit" option
   select file in *.apk $option_main $option_quit;
@@ -175,9 +183,9 @@ function showMenuDecompile(){
 
   listApks
 
-  echo "*************************************************************"
-  echo "  Choose one of the available apks to decompile into smali: "
-  echo "*************************************************************"
+  printf "\n*************************************************************"
+  printf "\n${yel}  Choose one of the available apks to decompile into smali:${end}"
+  printf "\n*************************************************************\n\n"
 
   ## Show a menu, listing all available apk files in the current dir. Also, there's a "quit" option
   select file in *."apk" $option_main $option_quit;
@@ -238,9 +246,9 @@ function showRecompileMenu(){
 
   listDirs
 
-  echo "*************************************************************"
-  echo "  Select a dir to recompile. Make sure it's smali converted"
-  echo "*************************************************************"
+  printf "\n*************************************************************"
+  printf "\n${yel}  Select a dir to recompile. Make sure it's smali converted${end}"
+  printf "\n*************************************************************\n\n"
 
   select option in "${DIRS[@]}" $option_main $option_quit;
   do
@@ -270,9 +278,9 @@ function showRecompileMenu(){
 
 function showMenu(){
 
-  echo "*************************************************************"
-  echo "  What do you want to do?"
-  echo "*************************************************************"
+  printf "\n*************************************************************"
+  printf "\n${yel}  What do you want to do?${end}"
+  printf "\n*************************************************************\n\n"
 
   select option in $option_decompile $option_recompile $option_sign $option_quit;
   do
@@ -305,5 +313,6 @@ function showMenu(){
 ############################
 # INIT
 ###########################
+
 
 showMenu
