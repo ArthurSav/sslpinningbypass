@@ -1,0 +1,309 @@
+#!/usr/bin/env bash
+
+shopt -s extglob
+shopt -s dotglob
+shopt -s nullglob
+
+DEFAULT_ARRAY_START="@("
+
+apks=$DEFAULT_ARRAY_START
+DIRS=(*/)
+DIR_STR="@("
+
+LICENSE=""
+
+selected_apk="default"
+
+##menu options
+option_main="main_menu"
+option_decompile="decompile"
+option_recompile="recompile"
+option_sign="sign_apk"
+option_generate_license="generate_new_license"
+option_quit="quit"
+
+license_name="license"
+license_password="password123"
+
+
+############################
+# LICENSE
+###########################
+
+# generate keystore license
+function generateLicense(){
+
+  #1 apk name
+
+  echo "Trying to generate license for $1"
+  name=$(basename $1 .apk)
+
+  keytool -genkey -v -keyalg "RSA" -keysize "2048" -validity "10000" -noprompt \
+ -alias $license_name \
+ -dname "CN=whatever.defaultstuff.com, OU=ID, O=IBM, L=Hursley, S=Hants, C=GB" \
+ -keystore "$name.keystore" \
+ -storepass $license_password \
+ -keypass $license_password
+}
+
+function listLicenses(){
+
+  LICENSE=$DEFAULT_ARRAY_START
+
+  for d in *.keystore; do
+    LICENSE+="$d|"
+  done
+
+  # Close the parenthesis. $string is now @(file1|file2|...|fileN)
+  LICENSE+=")"
+}
+
+function signApk(){
+
+  #1 keystore name
+  #2 apk name
+  #3 alias name
+
+  jarsigner -verbose -sigalg SHA1withRSA -keypass $license_password -storepass $license_password -digestalg SHA1 -keystore $1 $2 $3
+
+}
+
+## Lists available licenses in the dir and signs an apk with it
+function showLicenseMenu(){
+
+  #1 apk name
+
+  listLicenses
+
+  echo "*************************************************************"
+  echo "  Choose license to sign with:"
+  echo "*************************************************************"
+
+  ## Show a menu, listing all available apk files in the current dir. Also, there's a "quit" option
+  select keystore in *.keystore $option_generate_license $option_quit;
+  do
+      case $keystore in
+
+      $LICENSE)
+
+          echo "Signing $1 with $keystore..."
+          signApk $keystore $1 $license_name
+          break;
+          ;;
+
+      $option_generate_license)
+
+        generateLicense $1
+        showLicenseMenu $1
+        break;
+        ;;
+
+      $option_main)
+        showMenu
+        break;
+        ;;
+
+      *)
+          ## Exit
+          exit;;
+      esac
+  done
+}
+
+## Shows a menu with all available apks to decompile
+function showSignMenu(){
+
+  listApks
+
+  echo "*************************************************************"
+  echo "  Which apk would you like to sign? "
+  echo "*************************************************************"
+
+  ## Show a menu, listing all available apk files in the current dir. Also, there's a "quit" option
+  select file in *.apk $option_main $option_quit;
+  do
+      case $file in
+
+      ## If the choice is one of the files (if it matches $string)
+      $apks)
+
+          echo "Selected $file..."
+          selected_apk=$(basename $file .apk)
+          showLicenseMenu $file
+          break;
+          ;;
+
+      $option_main)
+        showMenu
+        break;
+        ;;
+
+      *)
+          ## Exit
+          exit;;
+      esac
+  done
+}
+
+############################
+# DECOMPILE
+###########################
+
+#Decompiles apk into smali
+function decompile(){
+
+  echo "Decompiling $1 into smali..."
+  apktool -f d $1 -o "$1_decompiled"
+
+}
+
+## Lists apks in current dir and saves them into a global var
+function listApks(){
+
+  apks=$DEFAULT_ARRAY_START
+
+  for d in *.apk; do
+    apks+="$d|"
+  done
+
+  # Close the parenthesis. $string is now @(file1|file2|...|fileN)
+  apks+=")"
+}
+
+## Shows a menu with all available apks to decompile
+function showMenuDecompile(){
+
+  listApks
+
+  echo "*************************************************************"
+  echo "  Choose one of the available apks to decompile into smali: "
+  echo "*************************************************************"
+
+  ## Show a menu, listing all available apk files in the current dir. Also, there's a "quit" option
+  select file in *."apk" $option_main $option_quit;
+  do
+      case $file in
+
+      ## If the choice is one of the files (if it matches $string)
+      $apks)
+
+          echo "Selected $file..."
+          selected_apk=$(basename $file .apk)
+          decompile $file
+          showRecompileMenu
+
+          break;
+          ;;
+
+      $option_main)
+        showMenu
+        break;
+        ;;
+
+      *)
+          ## Exit
+          exit;;
+      esac
+  done
+}
+
+############################
+# RECOMPILE
+###########################
+
+function listDirs(){
+
+  DIRS=(*/)
+  DIR_STR=$DEFAULT_ARRAY_START
+
+  for((i=0;i<${#DIRS[@]};i++))
+  do
+      DIR_STR+="${DIRS[$i]}|"
+  done
+  ## Close the parenthesis. $string is now @(file1|file2|...|fileN)
+  DIR_STR+=")"
+}
+
+#Recompiles smali into an apk
+function recompile(){
+
+  echo "*************************************************************"
+  echo "  Generating modified apk..."
+  echo "*************************************************************"
+
+  apktool b $1 -o "$selected_apk.modified.apk"
+}
+
+function showRecompileMenu(){
+
+  listDirs
+
+  echo "*************************************************************"
+  echo "  Select a dir to recompile. Make sure it's smali converted"
+  echo "*************************************************************"
+
+  select option in "${DIRS[@]}" $option_main $option_quit;
+  do
+    case $option in
+
+    $DIR_STR)
+      echo "Compiling $option ..."
+      recompile $option
+      showMenu
+      break;
+      ;;
+
+    $option_main)
+      showMenu
+      break;
+      ;;
+
+    *)
+      exit;;
+    esac
+  done
+}
+
+############################
+# MAIN
+###########################
+
+function showMenu(){
+
+  echo "*************************************************************"
+  echo "  What do you want to do?"
+  echo "*************************************************************"
+
+  select option in $option_decompile $option_recompile $option_sign $option_quit;
+  do
+    case $option in
+
+      $option_decompile)
+        showMenuDecompile
+        break;
+        ;;
+      $option_recompile)
+        showRecompileMenu
+        break;
+        ;;
+
+      $option_sign)
+        showSignMenu
+        break;
+        ;;
+
+      $option_main)
+        showMenu
+        break;
+        ;;
+      *)
+        exit;;
+      esac
+    done
+}
+
+############################
+# INIT
+###########################
+
+showMenu
