@@ -21,6 +21,7 @@ DIR_STR="@("
 LICENSE=""
 
 selected_apk="default"
+decompile_sufix="-decompiled"
 
 ##menu options
 option_main="main_menu"
@@ -95,6 +96,7 @@ function showLicenseMenu(){
       $LICENSE)
 
           echo "Signing $1 with $keystore..."
+
           signApk $keystore $1 $license_name
           break;
           ;;
@@ -136,7 +138,7 @@ function showSignMenu(){
       $apks)
 
           echo "Selected $file..."
-          selected_apk=$(basename $file .apk)
+          selected_apk=$(basename $1 .apk)
           showLicenseMenu $file
           break;
           ;;
@@ -161,8 +163,8 @@ function showSignMenu(){
 function decompile(){
 
   echo "Decompiling $1 into smali..."
-  apktool -f d $1 -o "$1_decompiled"
-
+  selected_apk=$(basename $1 .apk)
+  apktool -f d $1 -o "$selected_apk$decompile_sufix"
 }
 
 ## Lists apks in current dir and saves them into a global var
@@ -256,6 +258,7 @@ function showRecompileMenu(){
 
     $DIR_STR)
       echo "Compiling $option ..."
+      selected_apk=$(basename $option $decompile_sufix)
       recompile $option
       showMenu
       break;
