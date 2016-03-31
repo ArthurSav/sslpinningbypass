@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ioniconview="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.RecyclerView android:id="@id/recycleview_choose" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="@dimen/recycleview_choose_h" android:layout_alignParentBottom="true" />
+    <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/tx_effect_typename_h" android:layout_width="fill_parent" android:layout_height="@dimen/tx_effect_typename_h" android:text="@string/tx_timemachine" android:layout_above="@id/recycleview_choose" app:typeface="blodAvenir" />
+    <be.webelite.ion.IconView android:textSize="@dimen/btn_checked_fontsize" android:gravity="center" android:id="@id/btn_checked" android:background="@drawable/bg_radius_yellow_checkbtn" android:layout_width="@dimen/btn_checked_w" android:layout_height="@dimen/btn_checked_h" android:layout_margin="@dimen/btn_checked_mgr" android:layout_above="@id/recycleview_choose" android:layout_alignParentRight="true" app:name="ion_checkmark" />
+</merge>

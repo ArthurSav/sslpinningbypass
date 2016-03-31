@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/root_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:styleablesearchView="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/titlediv_search" android:layout_width="fill_parent" android:layout_height="46.0dip">
+        <RelativeLayout android:background="@color/gray_searchbg" android:paddingLeft="@dimen/search_bg_pd_pd_lr" android:paddingTop="8.0dip" android:paddingRight="@dimen/search_bg_pd_pd_lr" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.zhiliaoapp.musically.view.StyleableSearchView android:textSize="@dimen/search_edit_fontsize" android:gravity="center|left" android:id="@id/search_edit" android:background="@drawable/bg_raduis_white_div" android:paddingLeft="5.0dip" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="30.0dip" android:singleLine="true" android:imeOptions="actionSearch" styleablesearchView:init="@string/search_hint" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.zhiliaoapp.musically.musuikit.pulltorefresh.PullToRefreshListView android:id="@id/listview_findfriendresult" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/titlediv_search" />
+    <com.zhiliaoapp.musically.musuikit.loadingview.LoadingView android:id="@id/loading" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="150.0dip" />
+</RelativeLayout>

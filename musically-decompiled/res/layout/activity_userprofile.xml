@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/mainbg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ioniconview="http://schemas.android.com/apk/res-auto" xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/blackview" android:background="@android:color/black" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/title_height" android:layout_alignParentBottom="true" />
+    <RelativeLayout android:id="@id/profile_titleDiv" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/title_fontsize" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:id="@id/user_titleName" android:paddingLeft="@dimen/title_height" android:paddingRight="@dimen/title_height" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" android:singleLine="true" />
+        <include layout="@layout/layout_icon_exit" />
+        <be.webelite.ion.IconView android:textSize="@dimen/icontx_more_fontsize" android:textColor="@android:color/white" android:gravity="center" android:id="@id/icontx_more" android:layout_width="@dimen/title_height" android:layout_height="@dimen/title_height" android:layout_marginRight="@dimen/icontx_heartlike_mgr" android:shadowRadius="1.0" android:layout_alignParentRight="true" fresco:name="ion_more" />
+        <RelativeLayout android:id="@id/follow_post_div" android:visibility="invisible" android:layout_width="@dimen/btn_postnotifi_wh" android:layout_height="@dimen/title_height" android:layout_toLeftOf="@id/icontx_more">
+            <com.facebook.drawee.view.SimpleDraweeView android:id="@id/btn_followpost" android:layout_width="@dimen/btn_postnotifi_wh" android:layout_height="@dimen/btn_postnotifi_wh" android:layout_centerInParent="true" fresco:placeholderImage="@drawable/post_notification_normal" fresco:actualImageScaleType="focusCrop" fresco:roundedCornerRadius="180.0dip" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.zhiliaoapp.musically.view.gridview_withscroll.UserProfile_HGridView android:id="@id/picFrame_GridView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/profile_titleDiv" />
+</RelativeLayout>

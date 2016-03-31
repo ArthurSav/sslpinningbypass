@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:ioniconview="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center" android:id="@id/div_title" android:background="@drawable/bg_import_title" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/title_fontsize" android:textColor="@android:color/black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="@dimen/title_height" android:text="@string/segment_videos" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" ioniconview:typeface="demiBlodAvenir" />
+    </RelativeLayout>
+    <be.webelite.ion.IconView android:textSize="@dimen/title_fontsize" android:textColor="@color/bg_black" android:gravity="center" android:id="@id/closeIcon" android:layout_width="@dimen/title_height" android:layout_height="@dimen/title_height" ioniconview:name="ion_android_close" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/div_title">
+        <GridView android:id="@id/grid_import_videos" android:layout_width="fill_parent" android:layout_height="fill_parent" android:numColumns="4" />
+        <com.zhiliaoapp.musically.musuikit.loadingview.LoadingView android:id="@id/loadingview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+</RelativeLayout>

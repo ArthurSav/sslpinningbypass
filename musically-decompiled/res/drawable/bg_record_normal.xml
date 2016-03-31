@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <size android:height="100.0dip" android:width="100.0dip" />
+            <solid android:color="#19000000" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <size android:height="100.0dip" android:width="100.0dip" />
+            <solid android:color="@color/shoot_red" />
+            <stroke android:width="30.0dip" android:color="#00000000" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/camera_record" android:left="35.0dip" android:top="40.0dip" android:right="35.0dip" android:bottom="40.0dip" />
+</layer-list>

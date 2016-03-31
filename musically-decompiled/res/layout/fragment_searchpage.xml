@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/fragment_root" android:background="@android:color/black" android:paddingBottom="49.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:styleablesearchView="http://schemas.android.com/apk/res-auto" xmlns:ioniconview="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center" android:id="@id/div_searchtitle" android:background="@drawable/action_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <com.zhiliaoapp.musically.view.StyleableSearchView android:textSize="@dimen/search_edit_fontsize" android:textColor="@color/red" android:gravity="center|left" android:id="@id/searchview_allthing" android:background="@drawable/bg_searchview_trans" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:singleLine="true" android:editable="false" android:layout_centerVertical="true" android:imeOptions="actionSearch" ioniconview:textColor="@android:color/white" ioniconview:init="@string/search" />
+        <TextView android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginRight="20.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <be.webelite.ion.IconView android:textSize="20.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/btn_addfriend" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginRight="10.0dip" android:layout_above="@id/icontx_more" android:layout_alignParentRight="true" android:layout_centerVertical="true" ioniconview:name="ion_person_add" />
+    </RelativeLayout>
+    <com.zhiliaoapp.musically.view.MyDisScrollViewPager android:id="@id/viewpager_search" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/div_searchtitle" />
+</RelativeLayout>

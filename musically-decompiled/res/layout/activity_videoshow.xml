@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/mainbg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/swip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.zhiliaoapp.musically.view.VerticalViewPager android:id="@id/verViewPager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <IconTextView android:textSize="12.0sp" android:textColor="@color/red" android:gravity="center" android:id="@id/newFreshText" android:background="@drawable/bg_angle_radius" android:paddingLeft="4.0dip" android:paddingTop="2.0dip" android:paddingRight="4.0dip" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:shadowDx="3.0" android:shadowDy="3.0" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:id="@id/homepage_trackdiv" android:visibility="invisible" android:layout_width="@dimen/track_Icon_w" android:layout_height="@dimen/track_Icon_h" android:layout_marginRight="@dimen/track_Icon_mgr" android:layout_marginBottom="@dimen/track_Icon_mgb_nothome" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/img_track_album" android:layout_width="@dimen/track_Icon_w" android:layout_height="@dimen/track_Icon_h" android:layout_centerInParent="true" fresco:placeholderImage="@drawable/bg_trackblack" fresco:actualImageScaleType="focusCrop" fresco:roundedCornerRadius="180.0dip" />
+        <com.facebook.drawee.view.SimpleDraweeView android:background="@drawable/bg_trackblack" android:layout_width="18.0dip" android:layout_height="18.0dip" android:scaleType="center" android:layout_centerInParent="true" android:alpha="0.5" fresco:roundAsCircle="true" />
+        <View android:background="@drawable/bg_cycle_yellow" android:layout_width="8.0dip" android:layout_height="8.0dip" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <include android:id="@id/btn_exit" android:layout_width="@dimen/title_height" android:layout_height="@dimen/title_height" android:layout_marginLeft="@dimen/track_frame_mg" android:layout_marginTop="@dimen/track_exit_mgt" android:layout_alignParentLeft="true" layout="@layout/layout_icon_exit" />
+    <com.zhiliaoapp.musically.musuikit.loadingview.LoadingView android:id="@id/loadingview_main" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="100.0dip" />
+</RelativeLayout>

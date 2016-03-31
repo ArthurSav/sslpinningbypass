@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:styleablesearchView="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@color/gray_searchbg" android:paddingLeft="@dimen/search_bg_pd_pd_lr" android:paddingTop="@dimen/search_bg_pd_pd_tb" android:paddingRight="@dimen/search_bg_pd_pd_lr" android:paddingBottom="@dimen/search_bg_pd_pd_tb" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="@dimen/search_bg_pd_h">
+        <com.zhiliaoapp.musically.view.StyleableSearchView android:textSize="@dimen/search_edit_fontsize" android:gravity="center|left" android:id="@id/search_edit" android:background="@drawable/bg_raduis_white_div" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/search_edit_h" android:singleLine="true" android:imeOptions="actionSearch" />
+        <com.zhiliaoapp.musically.view.StyleableSearchView android:textSize="@dimen/search_edit_fontsize" android:gravity="center|left" android:id="@id/search_editable" android:background="@drawable/bg_raduis_white_div" android:paddingLeft="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/search_edit_h" android:singleLine="true" android:imeOptions="actionSearch" android:textCursorDrawable="@android:color/holo_blue_dark" styleablesearchView:init="@string/search_init_tracktag" />
+    </RelativeLayout>
+    <View android:id="@id/view_popularsongs_search" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="11.199982dip" />
+</LinearLayout>

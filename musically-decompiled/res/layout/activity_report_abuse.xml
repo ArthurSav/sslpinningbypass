@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ioniconview="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/titleDiv" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <TextView android:textSize="@dimen/title_tx_size" android:textColor="@color/red" android:gravity="center" android:id="@id/tx_report_cancle" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/title_height" android:text="@string/cancel" />
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/title_tx_size" android:textColor="@android:color/black" android:gravity="center" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/title_height" android:text="@string/report_abuse" android:layout_centerHorizontal="true" ioniconview:typeface="demiBlodAvenir" />
+        <TextView android:textSize="@dimen/title_tx_size" android:textColor="@color/red" android:gravity="center" android:id="@id/tx_report_done" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/title_height" android:text="@string/btn_done" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:id="@id/line" android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/titleDiv" />
+    <EditText android:textSize="@dimen/title_tx_size" android:gravity="top" android:id="@id/edtx_report_ab" android:background="@null" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/charactersthan140" android:maxEms="140" android:layout_below="@id/line" android:textCursorDrawable="@color/red" />
+</RelativeLayout>

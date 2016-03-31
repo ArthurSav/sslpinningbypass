@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="@dimen/profile_div_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="16.0sp" android:gravity="center|left" android:id="@id/tv_language" android:layout_width="200.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/profile_line_mgl" android:layout_alignParentLeft="true" android:layout_centerVertical="true" app:typeface="regularAvenir" />
+    <IconTextView android:textSize="@dimen/title_action_font_size" android:textColor="@color/following_green" android:gravity="center" android:id="@id/ic_language_selected" android:visibility="invisible" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginRight="@dimen/profile_line_mgl" android:text="@string/fa_check" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <View android:id="@id/view_separator" android:background="@color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/profile_line_mgl" android:layout_alignParentBottom="true" />
+</RelativeLayout>

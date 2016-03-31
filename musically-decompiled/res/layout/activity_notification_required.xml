@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/titlediv" android:background="@drawable/action_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/title_fontsize" android:textColor="@android:color/white" android:gravity="center" android:id="@id/message_titlediv_tx" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" android:text="@string/follow_requests" app:typeface="demiBlodAvenir" />
+        <include android:id="@id/btn_exit" android:layout_width="@dimen/title_height" android:layout_height="@dimen/title_height" android:layout_alignParentLeft="true" layout="@layout/layout_icon_exit" />
+    </RelativeLayout>
+    <com.zhiliaoapp.musically.musuikit.pulltorefresh.PullToRefreshListView android:id="@id/message_pulllist" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:dividerHeight="0.0dip" android:layout_below="@id/titlediv" android:footerDividersEnabled="false" />
+    <com.zhiliaoapp.musically.musuikit.loadingview.LoadingView android:id="@id/loading_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

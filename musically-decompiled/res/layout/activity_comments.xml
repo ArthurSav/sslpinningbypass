@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/keyboardlayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.zhiliaoapp.musically.view.comments.CommentsComponentView android:id="@id/comments_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.zhiliaoapp.musically.musuikit.loadingview.NoResultView android:id="@id/view_noresult" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="50.0dip" />
+    <include android:layout_width="@dimen/title_height" android:layout_height="@dimen/title_height" android:layout_alignParentLeft="true" layout="@layout/layout_icon_close" />
+</RelativeLayout>

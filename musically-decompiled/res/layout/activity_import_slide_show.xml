@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ioniconview="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center" android:id="@id/div_title" android:background="@drawable/bg_import_title" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/title_fontsize" android:textColor="@android:color/black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="@dimen/title_height" android:text="@string/slideshow" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" app:typeface="demiBlodAvenir" />
+    </RelativeLayout>
+    <be.webelite.ion.IconView android:textSize="@dimen/title_fontsize" android:textColor="@color/bg_black" android:gravity="center" android:id="@id/closeIcon" android:layout_width="@dimen/title_height" android:layout_height="@dimen/title_height" app:name="ion_android_close" />
+    <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirButton android:enabled="false" android:textSize="@dimen/subtitle_fontsize" android:textColor="@drawable/bg_import_slide_show_done_txt_color" android:gravity="center" android:id="@id/tv_done" android:background="@null" android:layout_width="wrap_content" android:layout_height="@dimen/title_height" android:text="@string/btn_done" android:singleLine="true" android:layout_alignParentRight="true" app:typeface="demiBlodAvenir" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_below="@id/div_title">
+        <GridView android:id="@id/grid_import_photos" android:layout_width="fill_parent" android:layout_height="fill_parent" android:horizontalSpacing="5.0dip" android:verticalSpacing="3.0dip" android:numColumns="3" />
+        <com.zhiliaoapp.musically.musuikit.loadingview.LoadingView android:id="@id/loadingview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+</RelativeLayout>

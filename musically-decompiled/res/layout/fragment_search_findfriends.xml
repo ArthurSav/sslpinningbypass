@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.zhiliaoapp.musically.musuikit.pulltorefresh.PullToRefreshExpandHeadListView android:id="@id/pulllistview_search_findfriends" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/gray_divider_line" android:dividerHeight="1.0px" android:footerDividersEnabled="false" />
+    <com.zhiliaoapp.musically.musuikit.loadingview.LoadingView android:id="@id/searchfriend_loadingview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

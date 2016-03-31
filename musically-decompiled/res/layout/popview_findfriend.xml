@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/div_searchbackground" android:background="@color/gray" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <com.zhiliaoapp.musically.view.StyleableSearchView android:textSize="15.0sp" android:gravity="left" android:id="@id/edit_searchedit" android:background="@drawable/bg_raduis_white_div" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_centerInParent="true" android:imeOptions="actionSearch" />
+    </RelativeLayout>
+    <LinearLayout android:id="@id/div_poptouchdiv" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.zhiliaoapp.musically.musuikit.pulltorefresh.PullToRefreshListView android:id="@id/listview_findfriendresult" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</LinearLayout>

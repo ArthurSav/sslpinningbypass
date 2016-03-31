@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:progress="http://schemas.android.com/apk/res-auto">
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:background="@drawable/bg_radius_aphablack" android:padding="15.0dip" android:layout_width="@dimen/loading_wh" android:layout_height="@dimen/loading_wh" />
+    <com.zhiliaoapp.musically.musuikit.loadingview.ProgressLoadingView android:layout_gravity="center" android:id="@id/progressPercent" android:background="@drawable/bg_radius_aphablack" android:visibility="invisible" android:layout_width="@dimen/loading_per_wh" android:layout_height="@dimen/loading_per_wh" progress:circleColor="#50cccccc" progress:percentCircleWidth="3.0dip" progress:percentTextSize="13.0sp" />
+    <TextView android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/tx_progressvaule" android:layout_width="45.0dip" android:layout_height="45.0dip" />
+    <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/setting_fontsize" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/tx_resultshow" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" progress:typeface="regularAvenir" />
+</merge>

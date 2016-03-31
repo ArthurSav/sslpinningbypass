@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/directly_root_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:ioniconview="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/layout_title" android:background="@drawable/action_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <IconTextView android:textSize="@dimen/directly_title_size" android:textColor="@android:color/white" android:gravity="center" android:id="@id/tv_finish" android:layout_width="@dimen/title_height" android:layout_height="@dimen/title_height" android:text="@string/fa_chevron_left" android:layout_alignParentLeft="true" />
+            <be.webelite.ion.IconView android:textSize="@dimen/directly_add_friend_size" android:textColor="@android:color/white" android:gravity="center" android:id="@id/btn_add_friend" android:visibility="gone" android:layout_width="@dimen/title_height" android:layout_height="@dimen/title_height" android:layout_alignParentRight="true" ioniconview:name="ion_plus_round" />
+            <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_directly_connecting_title" />
+            <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_directly_disconnected_title" />
+            <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_directly_friends_connected_title" />
+            <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_directly_strangers_connected_title" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <FrameLayout android:id="@id/layout_content" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/layout_title">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/layout_empty" android:background="@color/empty_conversation_list_bg_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="46.0sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/directly" />
+            <TextView android:textSize="@dimen/field_textsize" android:layout_gravity="center" android:id="@id/tv_empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/chat_directly" android:lineSpacingExtra="3.0dip" />
+            <ImageView android:layout_gravity="center" android:layout_width="240.0dip" android:layout_height="240.0dip" android:layout_marginTop="30.0dip" android:src="@drawable/directly_branding" />
+        </LinearLayout>
+        <ListView android:id="@id/list_view_conversation" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="#ffcccccc" android:dividerHeight="1.0px" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layout_account_login_other_device" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginTop="200.0dip" android:src="@drawable/alert_icon" />
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="16.0sp" android:textColor="@color/gray_999" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:text="@string/logged_out_from_directly" android:lineSpacingExtra="6.0dip" ioniconview:typeface="regularAvenir" />
+        <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/tv_reconnect" android:background="@drawable/bg_tx_retry" android:layout_width="100.0dip" android:layout_height="36.0dip" android:layout_marginTop="25.0dip" android:text="@string/reconnect" />
+    </LinearLayout>
+    <com.zhiliaoapp.musically.musuikit.loadingview.LoadingView android:id="@id/loadingview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

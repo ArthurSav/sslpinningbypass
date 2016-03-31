@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ioniconview="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/div_title" android:background="@drawable/action_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/directly_wh_titlediv">
+        <IconTextView android:textSize="@dimen/directly_title_size" android:textColor="@android:color/white" android:gravity="center" android:id="@id/btn_finish" android:layout_width="@dimen/title_height" android:layout_height="@dimen/directly_wh_titlediv" android:text="@string/fa_chevron_left" android:layout_alignParentLeft="true" />
+        <be.webelite.ion.IconView android:textSize="31.599976sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/btn_profile" android:layout_width="@dimen/title_height" android:layout_height="@dimen/title_height" android:layout_alignParentRight="true" ioniconview:name="ion_ios7_person" />
+        <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_directly_chat_connected_title" />
+        <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_directly_connecting_title" />
+        <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_directly_disconnected_title" />
+    </RelativeLayout>
+    <com.zhiliaoapp.musically.directly.view.msgview.MsgSender android:id="@id/msgsender" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <ListView android:scrollbarStyle="outsideOverlay" android:id="@id/listview" android:paddingBottom="10.0dip" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:transcriptMode="normal" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="5.0dip" android:layout_above="@id/msgsender" android:layout_below="@id/div_title" />
+</RelativeLayout>

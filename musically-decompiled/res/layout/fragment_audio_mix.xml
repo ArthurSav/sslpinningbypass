@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="118.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/audio_mix_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_centerHorizontal="true">
+        <View android:layout_gravity="center" android:id="@id/mix_bar" android:background="@color/audio_mix_line_color" android:layout_width="248.0dip" android:layout_height="1.1999817dip" />
+        <ImageView android:id="@id/mix_point" android:background="@drawable/bg_cycle_white" android:layout_width="28.399994sp" android:layout_height="28.399994sp" />
+    </FrameLayout>
+    <IconTextView android:textSize="28.399994sp" android:textColor="@color/audio_mix_icon_color" android:gravity="center" android:id="@id/left_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:text="@string/audio_mix_music" android:layout_toLeftOf="@id/audio_mix_layout" android:layout_centerVertical="true" />
+    <IconTextView android:textSize="28.399994sp" android:textColor="@color/audio_mix_icon_color" android:gravity="center" android:id="@id/right_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="@string/audio_mix_microphone" android:layout_toRightOf="@id/audio_mix_layout" android:layout_centerVertical="true" />
+</RelativeLayout>

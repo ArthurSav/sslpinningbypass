@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:ioniconview="http://schemas.android.com/apk/res-auto">
+    <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/comment_noresult_fontsize" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/tx_showvaule" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/comment_noresult_w" android:text="@string/be_the_first_to_comment" android:layout_centerInParent="true" ioniconview:typeface="regularAvenir" />
+    <be.webelite.ion.IconView android:textSize="@dimen/icon_noresult_fontsize" android:textColor="@color/light_gray" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/comment_noresulticon_mgb" android:layout_above="@id/tx_showvaule" android:layout_centerHorizontal="true" ioniconview:name="ion_chatbubble_working" />
+</RelativeLayout>

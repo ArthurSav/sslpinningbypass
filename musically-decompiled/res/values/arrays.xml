@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="discovercolor">
+        <item>\#FBC300</item>
+        <item>\#F62792</item>
+        <item>\#2ACAFF</item>
+        <item>\#68DB00</item>
+        <item>\#E5412B</item>
+        <item>\#16E499</item>
+        <item>\#FF7E00</item>
+        <item>\#03A6EA</item>
+    </string-array>
+    <string-array name="schemes">
+        <item>tag,com.zhiliaoapp.musically.activity.TagDetailsActivity</item>
+        <item>musical,com.zhiliaoapp.musically.activity.VideoPlayActivity</item>
+        <item>profile,com.zhiliaoapp.musically.activity.UserProfileActivity</item>
+        <item>song,com.zhiliaoapp.musically.activity.TrackActivity</item>
+        <item>comments,com.zhiliaoapp.musically.activity.CommentsActivity</item>
+        <item>capture,com.zhiliaoapp.musically.activity.RecordActivity</item>
+        <item>picksound,com.zhiliaoapp.musically.activity.NetLocalActivity</item>
+        <item>directly,com.zhiliaoapp.musically.directly.activity.DirectlyConversationsFromFriendsActivity</item>
+        <item>importvideo,com.zhiliaoapp.musically.activity.ImportVideoActivity</item>
+    </string-array>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="ic_launcher">false</item>
+    <item type="drawable" name="ic_plusone_medium_off_client">false</item>
+    <item type="drawable" name="ic_plusone_small_off_client">false</item>
+    <item type="drawable" name="ic_plusone_standard_off_client">false</item>
+    <item type="drawable" name="ic_plusone_tall_off_client">false</item>
+    <item type="drawable" name="ease_chatfrom_bg_focused">false</item>
+    <item type="drawable" name="ease_chatfrom_bg_normal">false</item>
+    <item type="drawable" name="ease_chatto_bg_focused">false</item>
+    <item type="drawable" name="ease_chatto_bg_normal">false</item>
+    <item type="drawable" name="ease_default_image">false</item>
+    <item type="drawable" name="ease_input_bar_bg_active">false</item>
+    <item type="drawable" name="ease_input_bar_bg_normal">false</item>
+    <item type="drawable" name="ease_msg_state_fail_resend">false</item>
+    <item type="drawable" name="ease_msg_state_fail_resend_pressed">false</item>
+    <item type="drawable" name="ease_type_select_btn_nor">false</item>
+    <item type="drawable" name="ease_type_select_btn_pressed">false</item>
+    <item type="drawable" name="ld">false</item>
+</resources>

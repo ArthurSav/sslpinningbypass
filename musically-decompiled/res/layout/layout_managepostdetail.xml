@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/follow_fan_list_div_h"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:fresco="http://schemas.android.com/apk/res-auto" xmlns:ioniconview="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/fimg_findfriend_usericon" android:layout_width="@dimen/fimg_user_follow_icon_wh" android:layout_height="@dimen/fimg_user_follow_icon_wh" android:layout_marginLeft="@dimen/fimg_user_follow_icon_mgrl" android:layout_marginRight="@dimen/fimg_user_follow_icon_mgrl" android:layout_centerVertical="true" ioniconview:placeholderImage="@drawable/default_user_icon" ioniconview:failureImage="@drawable/default_user_icon" ioniconview:actualImageScaleType="focusCrop" ioniconview:roundedCornerRadius="180.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/togdiv" android:layout_toRightOf="@id/fimg_findfriend_usericon" android:layout_centerVertical="true">
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/tx_user_follow_username_fontsize" android:textColor="@android:color/black" android:id="@id/tx_findfriend_username" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" ioniconview:typeface="avenir" />
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/message_status_tx_fontsize" android:textColor="@color/gray" android:id="@id/tx_findfriend_handleName" android:layout_width="wrap_content" android:layout_height="wrap_content" ioniconview:typeface="regularAvenir" />
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/message_status_tx_fontsize" android:textColor="@color/gray" android:id="@id/tx_findfriend_heartnum" android:layout_width="wrap_content" android:layout_height="wrap_content" ioniconview:typeface="regularAvenir" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/togdiv" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <com.zhiliaoapp.musically.musuikit.togglebutton.ToggleButton android:id="@id/btn_postnotifychange" android:layout_width="@dimen/toggle_btn_w" android:layout_height="@dimen/toggle_btn_h" android:layout_marginRight="8.0dip" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/gray_999" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+</RelativeLayout>

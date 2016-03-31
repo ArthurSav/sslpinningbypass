@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="30.0dip">
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:gravity="center" android:id="@id/menu_people" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/people" android:layout_weight="1.0" app:typeface="demiBlodAvenir" />
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:gravity="center" android:id="@id/ment_tags" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/tags" android:layout_weight="1.0" app:typeface="demiBlodAvenir" />
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:gravity="center" android:id="@id/menu_sounds" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/sounds" android:layout_weight="1.0" app:typeface="demiBlodAvenir" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="2.0dip">
+        <View android:id="@id/lineone" android:background="@color/tx_isfeatured_bgcolor" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <View android:id="@id/linetwo" android:background="@color/tx_isfeatured_bgcolor" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <View android:id="@id/linethree" android:background="@color/tx_isfeatured_bgcolor" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

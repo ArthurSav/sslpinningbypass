@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ff444444" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.zhiliaoapp.musically.view.CropImageView android:id="@id/cropView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/btn_done" android:layout_width="@dimen/img_preview_timecut_wh" android:layout_height="@dimen/img_preview_timecut_wh" android:layout_marginTop="@dimen/layout_group_right_controls_mg" android:layout_marginRight="@dimen/layout_group_right_controls_mg" android:src="@drawable/done_button" android:scaleType="fitXY" android:layout_alignParentRight="true" />
+    <ImageView android:id="@id/civ_crop_rotate" android:layout_width="@dimen/img_preview_timecut_wh" android:layout_height="@dimen/img_preview_timecut_wh" android:layout_marginTop="@dimen/track_frame_mgb" android:layout_marginRight="@dimen/layout_group_right_controls_mg" android:src="@drawable/rotate_video" android:scaleType="fitXY" android:layout_below="@id/btn_done" android:layout_alignParentRight="true" />
+    <com.zhiliaoapp.musically.musuikit.loadingview.LoadingView android:id="@id/loadingview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:layout_width="@dimen/title_height" android:layout_height="@dimen/title_height" android:layout_marginLeft="@dimen/preview_close_mgl" android:layout_marginTop="@dimen/track_frame_mg" layout="@layout/layout_icon_close" />
+</RelativeLayout>

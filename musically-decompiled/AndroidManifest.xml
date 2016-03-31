@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.zhiliaoapp.musically" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.zhiliaoapp.musically.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.zhiliaoapp.musically.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-feature android:glEsVersion="0x20000" android:required="true"/>
+    <supports-screens android:anyDensity="true"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@drawable/musicalappicon" android:label="@string/musically_app_name" android:largeHeap="true" android:name="com.zhiliaoapp.musically.MusicallyApplication" android:supportsRtl="true" android:theme="@style/AnimationActivity" android:vmSafeMode="true">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/fb_app_id"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.mob.tools.MobUIShell" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <data android:scheme="wb4114276537"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.zhiliaoapp.musically.activity.LoginShowActivity" android:screenOrientation="portrait" android:theme="@style/AllTranslucentActivity"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.LoginActivity" android:screenOrientation="portrait" android:theme="@style/AllTranslucentActivity"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.SplashActivity" android:screenOrientation="portrait" android:theme="@style/mainStart">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="musically"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.zhiliaoapp.splash"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.zhiliaoapp.musically.activity.ShareMusicalActivity" android:screenOrientation="portrait" android:theme="@style/AnimationTopBottomActivity"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.MusicalPreviewActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:launchMode="singleTask" android:name="com.zhiliaoapp.musically.activity.MainShowActivity" android:screenOrientation="portrait" android:theme="@style/mainStart" android:windowSoftInputMode="adjustNothing|stateHidden">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.zhiliaoapp.home"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.zhiliaoapp.musically.activity.CommentsActivity" android:screenOrientation="portrait" android:theme="@style/AnimationTopBottomActivity" android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.MusRecordActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.UserProfileActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.zhiliaoapp.directly"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.zhiliaoapp.musically.activity.TrackActivity" android:screenOrientation="portrait" android:theme="@style/AnimationActivity"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.FollowFriendsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.TagDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.TestActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.VideoPlayActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.TracksByTagActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.ReportAbuseActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTask" android:name="com.zhiliaoapp.musically.activity.SlideShowActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.EditSlideShowActivity" android:screenOrientation="portrait" android:theme="@style/AnimationTopBottomActivity"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.ImportSlideShowActivity" android:screenOrientation="portrait" android:theme="@style/AnimationTopBottomActivity"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.ImportImageVideoActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.ImportVideoActivity" android:screenOrientation="portrait" android:theme="@style/AnimationTopBottomActivity"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.InviteFriendsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.EditVideoActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.EditImageVideoActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.HappeningNowActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.PhotoStoryActivity" android:screenOrientation="portrait" android:theme="@style/AnimationTopBottomActivity"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.SearchFriendsActivity" android:screenOrientation="portrait" android:theme="@style/TranslucentActivityWithUpAndDown" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.TrackSearchResultActivity" android:screenOrientation="portrait" android:theme="@style/TranslucentActivityWithUpAndDown" android:windowSoftInputMode="adjustNothing|stateAlwaysVisible"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.SettingActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.SwitchLanguageActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.ProfileEditActivity" android:screenOrientation="portrait" android:theme="@style/AnimationTopBottomActivity" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.SignUpActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysVisible"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.SignInActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysVisible"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.ProfilePhotoActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.NetLocalActivity" android:screenOrientation="portrait" android:theme="@style/AnimationTopBottomActivity" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.ManagePostNotifiActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.ManageBlockListActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.ManageBestFanForeverListActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.TermOfUsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.TopUserActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.RecordActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.MediaRecorderActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.AtActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.NotificationRequiredActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.YouTubeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zhiliaoapp.musically.activity.TagUserSearchActivity" android:screenOrientation="portrait"/> //directly start
+<activity android:launchMode="singleTask" android:name="com.zhiliaoapp.musically.directly.activity.DirectlyConversationsFromFriendsActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTask" android:name="com.zhiliaoapp.musically.directly.activity.DirectlyConversationsFromStrangersActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTask" android:name="com.zhiliaoapp.musically.directly.activity.ChatActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name="com.zhiliaoapp.musically.directly.activity.DisplayImageActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name="com.zhiliaoapp.musically.activity.SelectDirectlyFriendsActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.zhiliaoapp.directly.selectfriend"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity> //directly end
+<meta-data android:name="io.fabric.ApiKey" android:value="7f595b8ca860a9ebabf8fc1a60eeecc3df22376e"/> [START gcm_receiver]
+<receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="gcm.play.android.samples.com.gcmquickstart"/>
+            </intent-filter>
+        </receiver> [END gcm_receiver]
+
+        [START gcm_listener]
+<service android:exported="false" android:name="com.zhiliaoapp.musically.gcm.MyGcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.zhiliaoapp.musically.gcm.MyInstanceIDListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.zhiliaoapp.musically.gcm.RegistrationIntentService"/>
+        <meta-data android:name="UMENG_APPKEY" android:value="5559e28267e58eb4c1000012"/>
+        <meta-data android:name="UMENG_CHANNEL" android:value="GooglePlay"/>
+        <meta-data android:name="EASEMOB_APPKEY" android:value="musically#musically"/>
+        <service android:name="com.easemob.chat.EMChatService"/>
+        <receiver android:exported="true" android:name="com.easemob.chat.EMGCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.zhiliaoapp.musically"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.easemob.chat.EMGCMListenerService"/>
+        <receiver android:exported="false" android:name="com.zhiliaoapp.musically.directly.easemob.receiver.GCMPushBroadCast">
+            <intent-filter>
+                <action android:name="com.easemob.sdk.push"/>
+                <category android:name="com.zhiliaoapp.musically"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.twitter.sdk.android.core.identity.OAuthActivity"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:icon="@drawable/tw__transparent" android:label="@string/kit_name" android:name="com.twitter.sdk.android.core.identity.ShareEmailActivity"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.digits.sdk.android.PhoneNumberActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.digits.sdk.android.ConfirmationCodeActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTop" android:name="com.digits.sdk.android.LoginCodeActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTop" android:name="com.digits.sdk.android.PinCodeActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.digits.sdk.android.FailureActivity" android:taskAffinity="com.digits.sdk.android"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.digits.sdk.android.ContactsActivity"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.digits.sdk.android.PhoneNumberActionBarActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.digits.sdk.android.ConfirmationCodeActionBarActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTop" android:name="com.digits.sdk.android.LoginCodeActionBarActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="stateVisible"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.digits.sdk.android.FailureActionBarActivity" android:taskAffinity="com.digits.sdk.android"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.digits.sdk.android.ContactsActionBarActivity"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTop" android:name="com.digits.sdk.android.PinCodeActionBarActivity" android:taskAffinity="com.digits.sdk.android" android:windowSoftInputMode="stateVisible"/>
+        <service android:enabled="true" android:exported="false" android:name="com.digits.sdk.android.ContactsUploadService"/>
+    </application>
+</manifest>

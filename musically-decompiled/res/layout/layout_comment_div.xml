@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/blurringed_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    <RelativeLayout android:id="@id/comment_UserIcon_Div" android:background="@android:color/white" android:layout_width="50.0dip" android:layout_height="40.0dip" android:layout_alignParentBottom="true" />
+    <EditText android:textSize="14.0sp" android:textColor="@android:color/black" android:textColorHint="@color/gray" android:gravity="center_vertical" android:id="@id/commentUserEdit" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="40.0dip" android:hint="@string/string_edit_hinted" android:maxLines="1" android:layout_toRightOf="@id/comment_UserIcon_Div" android:layout_alignParentBottom="true" android:inputType="text" android:imeOptions="actionSend" />
+    <com.zhiliaoapp.musically.musuikit.pulltorefresh.PullToRefreshListView android:id="@id/commentList" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" />
+    <IconTextView android:textSize="22.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/closeIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="6.0dip" android:text="@string/fa_times" android:shadowDx="3.0" android:shadowDy="3.0" android:shadowRadius="1.0" android:layout_alignParentLeft="true" />
+    <TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:id="@id/commentNum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="@string/comment_zero" android:layout_centerHorizontal="true" />
+</merge>

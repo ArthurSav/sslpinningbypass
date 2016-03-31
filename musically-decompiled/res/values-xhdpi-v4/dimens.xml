@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tw__login_btn_text_size">18.0sp</dimen>
+    <dimen name="comment_content_fontsize">13.0sp</dimen>
+    <dimen name="comment_content_line_spacing">2.0dip</dimen>
+    <dimen name="comment_content_margin_left">11.199982dip</dimen>
+    <dimen name="comment_content_margin_right">11.199982dip</dimen>
+    <dimen name="comment_content_spacing">6.0dip</dimen>
+    <dimen name="comment_item_min_height">82.5dip</dimen>
+    <dimen name="notification_badge_margin_left">35.0dip</dimen>
+    <dimen name="notification_badge_margin_top">13.0dip</dimen>
+    <dimen name="notification_content_duet_button_margin_top">8.0dip</dimen>
+    <dimen name="notification_content_line_space">3.0dip</dimen>
+    <dimen name="notification_content_padding_bottom">10.0dip</dimen>
+    <dimen name="notification_content_padding_top">10.0dip</dimen>
+    <dimen name="notification_details_fontsize">13.0sp</dimen>
+    <dimen name="notification_right_icon_h">39.19998dip</dimen>
+    <dimen name="notification_right_icon_w">52.079987dip</dimen>
+    <dimen name="notification_right_img_h">82.5dip</dimen>
+    <dimen name="notification_right_img_w">82.5dip</dimen>
+    <dimen name="notification_simple_details_status_margin_right">16.0dip</dimen>
+    <dimen name="notification_simple_image_status_margin_right">40.0dip</dimen>
+    <dimen name="notification_status_fontsize">13.0sp</dimen>
+    <dimen name="notification_title_fontsize">14.0sp</dimen>
+    <dimen name="notification_user_avatar_h">50.0dip</dimen>
+    <dimen name="notification_user_avatar_margin_left">6.0dip</dimen>
+    <dimen name="notification_user_avatar_margin_right">10.0dip</dimen>
+    <dimen name="notification_user_avatar_w">50.0dip</dimen>
+    <dimen name="notification_user_featured_icon_height">15.0dip</dimen>
+    <dimen name="notification_user_featured_icon_width">15.0dip</dimen>
+    <dimen name="user_featured_icon_small_height">15.0dip</dimen>
+    <dimen name="user_featured_icon_small_width">15.0dip</dimen>
+</resources>

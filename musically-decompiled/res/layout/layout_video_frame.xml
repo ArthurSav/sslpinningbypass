@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.RecyclerView android:id="@id/frames" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.zhiliaoapp.musically.view.VideoCutPointView android:id="@id/cut_point" android:background="@drawable/bg_cut_point" android:clickable="true" android:layout_width="@dimen/view_cut_point_w" android:layout_height="fill_parent" />
+</merge>

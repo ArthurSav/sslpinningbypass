@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:topLeftRadius="19.599976dip" android:bottomLeftRadius="19.599976dip" />
+    <solid android:color="@color/btn_shoot_yellow" />
+</shape>

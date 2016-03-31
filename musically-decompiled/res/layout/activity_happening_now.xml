@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ioniconview="http://schemas.android.com/apk/res-auto">
+    <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/title_fontsize" android:textColor="@android:color/white" android:gravity="center" android:id="@id/tx_title" android:background="@drawable/action_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" android:text="@string/select_videos_from" />
+    <be.webelite.ion.IconView android:textSize="@dimen/title_fontsize" android:textColor="@android:color/white" android:gravity="center" android:id="@id/closeIcon" android:layout_width="@dimen/title_height" android:layout_height="@dimen/title_height" android:layout_alignParentLeft="true" ioniconview:name="ion_android_close" />
+    <IconTextView android:textSize="@dimen/title_fontsize" android:textColor="@android:color/white" android:gravity="center" android:id="@id/itv_refresh" android:layout_width="@dimen/title_height" android:layout_height="@dimen/title_height" android:text="{fa-refresh}" android:layout_alignParentRight="true" />
+    <ListView android:id="@id/lv_happing_now_grid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tx_title" />
+    <com.zhiliaoapp.musically.musuikit.loadingview.LoadingView android:id="@id/loadingview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

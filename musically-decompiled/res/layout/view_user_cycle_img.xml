@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/user_cycleImg" android:layout_width="fill_parent" android:layout_height="fill_parent" fresco:placeholderImage="@drawable/default_user_icon" fresco:actualImageScaleType="focusCrop" fresco:roundedCornerRadius="180.0dip" fresco:roundingBorderWidth="1.0px" fresco:roundingBorderColor="@color/pressed_color" />
+    <ImageView android:layout_gravity="center|right|top" android:id="@id/user_featured" android:visibility="gone" android:layout_width="@dimen/user_featured_icon_small_width" android:layout_height="@dimen/user_featured_icon_small_height" android:layout_margin="-10.0dip" android:src="@drawable/user_featured" />
+</merge>

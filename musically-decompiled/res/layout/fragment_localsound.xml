@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/layout_search" android:background="@color/gray_searchbg" android:paddingLeft="@dimen/search_bg_pd_pd_lr" android:paddingTop="@dimen/search_bg_pd_pd_tb" android:paddingRight="@dimen/search_bg_pd_pd_lr" android:paddingBottom="@dimen/search_bg_pd_pd_tb" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="@dimen/search_bg_pd_h">
+        <com.zhiliaoapp.musically.view.StyleableSearchView android:textSize="@dimen/search_edit_fontsize" android:gravity="center|left" android:id="@id/search_view" android:background="@drawable/bg_raduis_white_div" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/search_edit_h" android:singleLine="true" android:imeOptions="actionSearch" />
+    </RelativeLayout>
+    <com.zhiliaoapp.musically.musuikit.pulltorefresh.PullToRefreshListView android:id="@id/listview_localsong" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/layout_search" />
+    <com.zhiliaoapp.musically.view.searchview.TrackSearchResultView android:id="@id/search_result" android:background="@color/black_halftrans" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/layout_search" />
+    <com.zhiliaoapp.musically.musuikit.loadingview.LoadingView android:id="@id/loadingview" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/layout_search" />
+</RelativeLayout>

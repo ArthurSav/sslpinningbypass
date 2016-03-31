@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/iv_photo" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <com.zhiliaoapp.musically.view.slideshow.PhotoCrossIcon android:layout_gravity="right" android:id="@id/ic_cross" android:layout_width="26.0dip" android:layout_height="26.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" />
+</FrameLayout>

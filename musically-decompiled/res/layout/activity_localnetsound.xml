@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:id="@id/div_searchtitle" android:background="@drawable/action_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <com.zhiliaoapp.musically.view.SegmentButtons android:id="@id/segment_choose_btns" android:layout_width="@dimen/btn_segment_w" android:layout_height="@dimen/btn_segment_h" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <include android:layout_width="@dimen/title_height" android:layout_height="@dimen/title_height" android:layout_alignParentLeft="true" layout="@layout/layout_icon_close" />
+    <android.support.v4.view.ViewPager android:id="@id/viewPager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/div_searchtitle" />
+</RelativeLayout>

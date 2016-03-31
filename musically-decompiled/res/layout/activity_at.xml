@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/titleDiv" android:background="@drawable/action_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/title_fontsize" android:textColor="@android:color/white" android:gravity="center" android:id="@id/tx_signup_title" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" android:text="@string/mention" app:typeface="demiBlodAvenir" />
+        <include android:id="@id/btn_exit" android:layout_width="@dimen/title_height" android:layout_height="@dimen/title_height" android:layout_alignParentLeft="true" layout="@layout/layout_icon_exit" />
+    </RelativeLayout>
+    <com.zhiliaoapp.musically.view.SearchTrackHeadView android:id="@id/searchview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/titleDiv" />
+    <com.zhiliaoapp.musically.musuikit.pulltorefresh.PullToRefreshListView android:id="@id/listview" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:layout_below="@id/searchview" />
+    <include android:id="@id/layout_empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/searchview" layout="@layout/layout_empty_friends" />
+    <com.zhiliaoapp.musically.musuikit.loadingview.LoadingView android:id="@id/loadingview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/searchview" />
+</RelativeLayout>

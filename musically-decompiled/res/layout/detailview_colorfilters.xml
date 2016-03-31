@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="@dimen/recycleview_choose_h" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/img_timemachine_example" android:layout_width="@dimen/img_timemachine_example_wh" android:layout_height="@dimen/img_timemachine_example_wh" android:layout_marginTop="@dimen/img_timemachine_example_mgt" android:layout_centerHorizontal="true" app:fadeDuration="1" app:actualImageScaleType="focusCrop" />
+    <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/tx_effect_typename" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/line_be_choosen" android:layout_below="@id/img_timemachine_example" app:typeface="avenir" />
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/icon_lock" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_alignRight="@id/img_timemachine_example" app:placeholderImage="@drawable/filterlock" app:placeholderImageScaleType="fitXY" />
+    <View android:id="@id/line_be_choosen" android:background="@color/red_btn_post_bgr" android:layout_width="fill_parent" android:layout_height="@dimen/trackline_h" android:layout_alignParentBottom="true" />
+</RelativeLayout>

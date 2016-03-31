@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/mainbg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/titleDiv" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/title_fontsize" android:textColor="@android:color/white" android:gravity="center" android:id="@id/message_titlediv_tx" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" app:typeface="demiBlodAvenir" />
+        <include android:id="@id/btn_exit" android:layout_width="@dimen/title_height" android:layout_height="@dimen/title_height" android:layout_alignParentLeft="true" layout="@layout/layout_icon_exit" />
+    </RelativeLayout>
+    <com.zhiliaoapp.musically.view.gridview_withscroll.TrackFrame_HGrid android:id="@id/track_PicFrameGrid" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/titleDiv" />
+    <com.zhiliaoapp.musically.musuikit.loadingview.LoadingView android:id="@id/loading" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="tw__time_hours">
+        <item quantity="other">%dชม.</item>
+        <item quantity="one">1ชม.</item>
+    </plurals>
+    <plurals name="tw__time_mins">
+        <item quantity="other">%dนาที</item>
+        <item quantity="one">1นาที</item>
+    </plurals>
+    <plurals name="tw__time_secs">
+        <item quantity="other">%dวิ</item>
+        <item quantity="one">1วิ</item>
+    </plurals>
+</resources>

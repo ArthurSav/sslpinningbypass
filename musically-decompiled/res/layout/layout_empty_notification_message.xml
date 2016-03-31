@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center_horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.joanzapata.iconify.widget.IconTextView android:textSize="60.0dip" android:textColor="@color/gray_999" android:id="@id/empty_icon_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/empty_title_margin_top" android:text="@string/fa_bolt" android:layout_centerHorizontal="true" />
+    <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="16.0sp" android:textColor="@color/gray_999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/empty_sub_title_margin_top" android:text="@string/no_notification" android:layout_below="@id/empty_icon_view" android:layout_centerHorizontal="true" app:typeface="regularAvenir" />
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/pop_layout" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="@dimen/shoot_popup_h">
+        <RelativeLayout android:id="@id/pop_music_part" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginTop="@dimen/shoot_popup_icon_mgt" android:src="@drawable/ic_find_music" android:scaleType="centerInside" android:layout_centerHorizontal="true" />
+            <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="17.0sp" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/shoot_popup_tx_mgt" android:text="@string/pickmusic" android:layout_weight="1.0" android:layout_centerHorizontal="true" app:typeface="demiBlodAvenir" />
+        </RelativeLayout>
+        <View android:background="@color/line_divider" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+        <RelativeLayout android:id="@id/pop_shoot_part" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginTop="@dimen/shoot_popup_icon_mgt" android:src="@drawable/video_camera" android:scaleType="centerInside" android:layout_centerHorizontal="true" />
+            <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="17.0sp" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/shoot_popup_tx_mgt" android:text="@string/shootfirst" android:layout_weight="1.0" android:layout_centerHorizontal="true" app:typeface="demiBlodAvenir" />
+        </RelativeLayout>
+        <View android:background="@color/line_divider" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+        <RelativeLayout android:id="@id/pop_import_part" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginTop="@dimen/shoot_popup_icon_mgt" android:src="@drawable/camera_roll" android:scaleType="centerInside" android:layout_centerHorizontal="true" />
+            <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="17.0sp" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/shoot_popup_tx_mgt" android:text="@string/importvideo" android:layout_weight="1.0" android:layout_centerHorizontal="true" app:typeface="demiBlodAvenir" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

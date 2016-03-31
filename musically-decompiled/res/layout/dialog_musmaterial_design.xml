@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textColor="@android:color/black" android:gravity="center" android:id="@id/title" android:background="@color/material_title_gray" android:layout_width="fill_parent" android:layout_height="@dimen/material_dialog_title_h" app:typeface="blodAvenir" />
+    <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textColor="@android:color/black" android:id="@id/title_status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" app:typeface="blodAvenir" />
+    <WebView android:textColor="@color/light_gray" android:id="@id/content" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_margin="10.0dip" android:layout_weight="1.0" />
+    <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/btn_accept" android:background="@color/material_title_green" android:layout_width="fill_parent" android:layout_height="@dimen/material_dialog_title_h" android:text="@string/accept" app:typeface="blodAvenir" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.zhiliaoapp.musically.musuikit.pulltorefresh.PullToRefreshListView android:id="@id/listview_findtrackresult" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:textSize="@dimen/setting_fontsize" android:textColor="@color/gray_999" android:gravity="center" android:id="@id/empty_view_song_list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_song_found" android:layout_centerInParent="true" />
+    <com.zhiliaoapp.musically.musuikit.loadingview.LoadingView android:id="@id/loadingview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/picFrame_ImageView" android:layout_width="fill_parent" android:layout_height="fill_parent" fresco:fadeDuration="1" fresco:placeholderImage="@drawable/bg_nopic_gray" fresco:actualImageScaleType="focusCrop" fresco:backgroundImage="@drawable/bg_nopic_gray" />
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/isPrivate" android:visibility="invisible" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_margin="5.0dip" android:layout_alignParentLeft="true" fresco:placeholderImage="@drawable/private_indicator" fresco:placeholderImageScaleType="fitXY" />
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@id/isMoment" android:visibility="invisible" android:layout_width="18.0dip" android:layout_height="13.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" fresco:placeholderImage="@drawable/moment_indicator" fresco:placeholderImageScaleType="fitXY" />
+</RelativeLayout>

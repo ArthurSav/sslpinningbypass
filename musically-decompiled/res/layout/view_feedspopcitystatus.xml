@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="28.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/div_follow" android:layout_width="@dimen/titlestatus_child_w" android:layout_height="fill_parent">
+        <View android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="1.0px" android:alpha="0.4" />
+        <View android:id="@id/line_follow" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="3.0dip" />
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/titlestatus_fontsize" android:textColor="@android:color/white" android:id="@id/tx_follow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/follow" android:singleLine="true" android:layout_centerInParent="true" app:typeface="avenir" />
+        <View android:id="@id/img_fresh_follow" android:background="@drawable/bg_cycle_yellow" android:layout_width="6.0dip" android:layout_height="6.0dip" android:layout_marginTop="5.0dip" android:layout_toRightOf="@id/tx_follow" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/div_popular" android:layout_width="@dimen/titlestatus_child_w" android:layout_height="fill_parent">
+        <View android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="1.0px" android:alpha="0.4" />
+        <View android:id="@id/line_popular" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="3.0dip" />
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/titlestatus_fontsize" android:textColor="@android:color/white" android:id="@id/tx_popular" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/featured" android:singleLine="true" android:layout_centerInParent="true" app:typeface="avenir" />
+        <View android:id="@id/img_fresh_popular" android:background="@drawable/bg_cycle_yellow" android:layout_width="6.0dip" android:layout_height="6.0dip" android:layout_marginTop="5.0dip" android:layout_toRightOf="@id/tx_popular" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/div_nearby" android:layout_width="@dimen/titlestatus_child_w" android:layout_height="fill_parent">
+        <View android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="1.0px" android:alpha="0.4" />
+        <View android:id="@id/line_nearby" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/titlestatus_fontsize" android:textColor="@android:color/white" android:gravity="center" android:id="@id/tx_nearby" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_city" android:singleLine="true" android:layout_centerInParent="true" app:typeface="avenir" />
+    </RelativeLayout>
+</LinearLayout>

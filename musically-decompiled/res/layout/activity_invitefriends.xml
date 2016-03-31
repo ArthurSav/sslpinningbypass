@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/titlediv" android:background="@drawable/action_bar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/title_fontsize" android:textColor="@android:color/white" android:gravity="center" android:id="@id/titlediv_tx" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" android:text="@string/findfriends" app:typeface="demiBlodAvenir" />
+        <include android:id="@id/btn_exit" android:layout_width="@dimen/title_height" android:layout_height="@dimen/title_height" android:layout_alignParentLeft="true" layout="@layout/layout_icon_exit" />
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/invite_fontsize" android:textColor="@android:color/white" android:gravity="center" android:id="@id/btn_invite" android:layout_width="wrap_content" android:layout_height="@dimen/title_height" android:layout_marginRight="@dimen/abc_action_bar_overflow_padding_end_material" android:text="@string/invite" android:layout_alignParentRight="true" app:typeface="demiBlodAvenir" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/div_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/titlediv" />
+</RelativeLayout>

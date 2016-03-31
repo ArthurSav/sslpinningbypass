@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bg_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center" android:id="@id/div_title" android:layout_width="fill_parent" android:layout_height="@dimen/title_height">
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/title_fontsize" android:textColor="@android:color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="@dimen/title_height" android:text="@string/title_edit_slide_show" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" app:typeface="demiBlodAvenir" />
+    </RelativeLayout>
+    <include android:layout_width="@dimen/title_height" android:layout_height="@dimen/title_height" android:layout_alignParentLeft="true" layout="@layout/layout_icon_close" />
+    <FrameLayout android:id="@id/layout_cropimage" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/div_title">
+        <com.zhiliaoapp.musically.view.CropImageView android:id="@id/cropview" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/iv_fullsize" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <RelativeLayout android:id="@id/layout_options" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_below="@id/layout_cropimage">
+        <LinearLayout android:orientation="horizontal" android:id="@id/tv_toleft_rotate" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_centerVertical="true">
+            <com.joanzapata.iconify.widget.IconTextView android:textSize="14.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fa_undo" />
+            <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/anticlockwise_rotate" app:typeface="demiBlodAvenir" />
+        </LinearLayout>
+        <RadioGroup android:gravity="right" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+            <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirRadioButton android:textSize="12.0sp" android:textColor="@drawable/bg_slideshow_option_txt_color" android:layout_gravity="center_vertical" android:id="@id/rb_square" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:checked="true" android:button="@null" android:text="@string/square" app:typeface="demiBlodAvenir" />
+            <View android:layout_gravity="center_vertical" android:background="@color/gray_background" android:layout_width="1.0px" android:layout_height="40.0px" android:layout_marginRight="10.0dip" />
+            <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirRadioButton android:textSize="12.0sp" android:textColor="@drawable/bg_slideshow_option_txt_color" android:layout_gravity="center_vertical" android:id="@id/rb_fullsize" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:button="@null" android:text="@string/full_size" app:typeface="demiBlodAvenir" />
+        </RadioGroup>
+    </RelativeLayout>
+    <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirButton android:textColor="#ffffffff" android:id="@id/btn_crop" android:background="@drawable/bg_green_createbtn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:text="@string/crop" android:layout_below="@id/layout_options" app:typeface="demiBlodAvenir" />
+</RelativeLayout>

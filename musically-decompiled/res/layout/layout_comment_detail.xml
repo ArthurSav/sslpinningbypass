@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/comment_div_pdrl" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/layout_user_avatar" android:paddingTop="@dimen/comment_div_pdtb" android:layout_width="@dimen/comment_userCycleImg_wh" android:layout_height="wrap_content">
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/comment_user_Img" android:layout_width="@dimen/comment_userCycleImg_wh" android:layout_height="@dimen/comment_userCycleImg_wh" app:fadeDuration="0" app:placeholderImage="@drawable/default_user_icon" app:actualImageScaleType="focusCrop" app:roundedCornerRadius="180.0dip" app:roundingBorderWidth="1.0px" app:roundingBorderColor="@color/pressed_color" />
+        <ImageView android:layout_gravity="center|right|top" android:id="@id/user_featured" android:visibility="gone" android:layout_width="@dimen/user_featured_icon_small_width" android:layout_height="@dimen/user_featured_icon_small_height" android:layout_margin="-10.0dip" android:src="@drawable/user_featured" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/layout_content" android:paddingTop="@dimen/comment_div_pdtb" android:paddingBottom="@dimen/comment_div_pdtb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/comment_content_margin_left" android:layout_marginRight="@dimen/comment_content_margin_right" android:layout_toRightOf="@id/layout_user_avatar" android:layout_centerVertical="true">
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/comment_content_fontsize" android:textColor="@android:color/white" android:id="@id/comment_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" app:typeface="demiBlodAvenir" />
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="@dimen/comment_content_fontsize" android:textColor="@android:color/white" android:id="@id/comment_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/comment_content_spacing" android:lineSpacingExtra="@dimen/comment_content_line_spacing" app:typeface="regularAvenir" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/layout_like_feature" android:paddingTop="@dimen/comment_div_pdtb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+        <be.webelite.ion.IconView android:textSize="12.0sp" android:textColor="@color/white_shadow" android:gravity="center" android:id="@id/comment_featured" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" app:name="ion_arrow_graph_up_right" />
+        <IconTextView android:textSize="12.0sp" android:textColor="@color/white_shadow" android:gravity="center" android:id="@id/comment_like_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/layout_ref_musical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/comment_ref_musical" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_centerVertical="true" app:actualImageScaleType="focusCrop" />
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/comment_ref_cover" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_centerVertical="true" app:actualImageScaleType="focusCrop" />
+    </RelativeLayout>
+    <View android:background="@color/list_divider_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/comment_div_pdtb" android:layout_below="@id/layout_user_avatar" android:layout_alignParentBottom="true" />
+</RelativeLayout>

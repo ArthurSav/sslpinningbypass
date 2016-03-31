@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/fragment_root" android:background="@drawable/bg_raduis_white_div" android:paddingTop="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="18.0dip" android:textColor="#ff000000" android:gravity="center" android:id="@id/tx_alert_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/error" app:typeface="blodAvenir" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tx_alert_title">
+        <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textSize="16.0dip" android:textColor="@android:color/black" android:gravity="center" android:id="@id/tx_mainvaule" android:paddingLeft="8.0dip" android:paddingTop="10.0dip" android:paddingRight="8.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <View android:id="@id/firstline" android:background="@color/light_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/tx_mainvaule" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="25.0dip" android:layout_below="@id/firstline">
+            <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textColor="@color/btntextcolor" android:gravity="center" android:id="@id/btn_cancel" android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="1.0" />
+            <View android:id="@id/centerline" android:background="@color/light_gray" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+            <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textColor="@color/btntextcolor" android:gravity="center" android:id="@id/btn_ok" android:padding="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/confirm" android:layout_weight="1.0" />
+            <com.zhiliaoapp.musically.musuikit.ownfonttextview.AvenirTextView android:textColor="@color/btntextcolor" android:gravity="center" android:id="@id/btn_base" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
